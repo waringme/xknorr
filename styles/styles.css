@@ -110,6 +110,10 @@ h6 {
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
+  color: #007a33;
+  font-family: Filson Soft;
+  line-height: 1.2;
+
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
