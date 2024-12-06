@@ -17,11 +17,11 @@
   --dark-color: #505050;
   --text-color: #131313;
   --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --link-hover-color: #cf1d1d;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --heading-font-family:    roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -38,6 +38,7 @@
 
   /* nav height */
   --nav-height: 64px;
+  color: #007a33;
 }
 
 /* fallback fonts */
@@ -111,8 +112,6 @@ h6 {
   line-height: 1.25;
   scroll-margin: 40px;
   color: #007a33;
-  font-family: Filson Soft;
-  line-height: 1.2;
 
 }
 
