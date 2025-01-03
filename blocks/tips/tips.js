@@ -15,5 +15,5 @@ export default async function decorate(block) {
         item.appendChild(a);
         list.appendChild(item);
     }
-    block.appendChild(list);
+    block.appendChild(list); 
 }
