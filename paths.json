@@ -1,6 +1,8 @@
 {
   "mappings": [
     "/content/xknorr/:/",
-    "/content/xknorr/configuration:/.helix/config.json"
+    "/content/xknorr/configuration:/.helix/config.json",
+    "/content/brand2/:/",
+    "/content/brand2/configuration:/.helix/config.json",
   ]
 }
