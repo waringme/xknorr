@@ -10,6 +10,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata,
 } from './aem.js';
 
 /**
@@ -153,10 +154,17 @@ function getBrandFromUrl(url) {
 }
 
 function loadBrandStyle(){
-  loadCSS(`${window.hlx.codeBasePath}/styles/styles-${getBrandFromUrl(window.location.host)}.css`);
+  let url = window.location.host;
+  const proxyUrl = getMetadata('hlx:proxyUrl');
+  if (proxyUrl && proxyUrl !== '') {
+    url = proxyUrl;
+  }
+  let brand = getBrandFromUrl(url);
+  loadCSS(`${window.hlx.codeBasePath}/styles/styles-${brand}.css`);
 }
 
 async function loadPage() {
+  loadBrandStyle();
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
