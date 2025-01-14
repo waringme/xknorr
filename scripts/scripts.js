@@ -165,7 +165,7 @@ function loadBrandStyle(){
 }
 
 async function loadPage() {
-  loadBrandStyle();
+ // loadBrandStyle();
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
