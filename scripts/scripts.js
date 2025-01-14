@@ -150,7 +150,7 @@ function getBrandFromUrl(url) {
 }
 
 function loadBrandStyle() {
-  let url = window.location.host;
+  let url = window.location.href;
   const proxyUrl = getMetadata('hlx:proxyUrl');
   if (proxyUrl && proxyUrl !== '') {
     url = proxyUrl;
@@ -167,4 +167,4 @@ async function loadPage() {
   loadDelayed();
 }
 
-loadPage();
+  loadPage();
