@@ -138,10 +138,32 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
+
+function getBrandFromUrl(url) {
+  // Use URL constructor to parse the URL
+  const parsedUrl = new URL(url);
+  
+  // Extract the hostname and split it by '--'
+  const parts = parsedUrl.hostname.split('--');
+  
+  // The brand name is the second part
+  const brand = parts[1];
+  
+  return brand;
+}
+
+function loadBrandStyle(){
+  loadCSS(`${window.hlx.codeBasePath}/styles/styles-${getBrandFromUrl(window.location.host)}.css`);
+}
+
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
 }
+
+
+
+
 
 loadPage();
