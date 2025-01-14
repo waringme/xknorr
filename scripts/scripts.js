@@ -139,40 +139,32 @@ function loadDelayed() {
   // load anything that can be postponed to the latest here
 }
 
-
 function getBrandFromUrl(url) {
   // Use URL constructor to parse the URL
   const parsedUrl = new URL(url);
-  
   // Extract the hostname and split it by '--'
   const parts = parsedUrl.hostname.split('--');
-  
   // The brand name is the second part
   const brand = parts[1];
-  
   return brand;
 }
 
-function loadBrandStyle(){
+function loadBrandStyle() {
   let url = window.location.host;
   const proxyUrl = getMetadata('hlx:proxyUrl');
   if (proxyUrl && proxyUrl !== '') {
     url = proxyUrl;
   }
-  let brand = getBrandFromUrl(url);
+  const brand = getBrandFromUrl(url);
   console.log(brand);
- // loadCSS(`${window.hlx.codeBasePath}/styles/styles-${brand}.css`);
+  loadCSS(`${window.hlx.codeBasePath}/styles/styles-${brand}.css`);
 }
 
 async function loadPage() {
- // loadBrandStyle();
+  loadBrandStyle();
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
 }
-
-
-
-
 
 loadPage();
