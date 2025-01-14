@@ -167,4 +167,4 @@ async function loadPage() {
   loadDelayed();
 }
 
-//loadPage();
+loadPage();
