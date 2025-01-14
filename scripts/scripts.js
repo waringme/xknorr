@@ -160,7 +160,8 @@ function loadBrandStyle(){
     url = proxyUrl;
   }
   let brand = getBrandFromUrl(url);
-  loadCSS(`${window.hlx.codeBasePath}/styles/styles-${brand}.css`);
+  console.log(brand);
+ // loadCSS(`${window.hlx.codeBasePath}/styles/styles-${brand}.css`);
 }
 
 async function loadPage() {
